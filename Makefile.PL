@@ -5,6 +5,7 @@ use ExtUtils::MakeMaker;
 my $eumm_version = version->parse($ExtUtils::MakeMaker::VERSION);
 my $prereq = {
     'AppConfig' => 0,
+    'common::sense' => 0,
     'DBIx::Class' => 0,
     'Mojolicious' => 0,
     'Moose' => 0,
@@ -14,7 +15,7 @@ my @args = (
     NAME           => 'PRFNeo',
     VERSION_FROM   => 'lib/PRFNeo.pm',
     ABSTRACT       => 'A new and more fun PRFdb',
-    AUTHOR         => 'atb',
+    AUTHOR         => 'atxb',
     LICENSE        => 'gpl',
     test           => {TESTS => 't/*.t'}
     );
