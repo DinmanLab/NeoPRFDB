@@ -4,7 +4,6 @@ use autodie;
 use diagnostics;
 use Mojolicious::Lite;
 use lib "lib";
-use local::lib;
 use PRFNeo;
 
 # Documentation browser under "/perldoc"
