@@ -33,11 +33,15 @@
       "runtime" : {
          "requires" : {
             "AppConfig" : "0",
-            "Getopt::Long" : "0"
+            "DBIx::Class" : "0",
+            "Getopt::Long" : "0",
+            "Mojo::Lite" : "0",
+            "Moose" : "0",
+            "common::sense" : "0"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "201603",
+   "version" : "0",
    "x_serialization_backend" : "JSON::PP version 2.27300"
 }
