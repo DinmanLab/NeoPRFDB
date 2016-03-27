@@ -3,10 +3,11 @@ use local::lib;
 use lib 'perl5';
 
 use ExtUtils::AutoInstall (
-    -core => [ 
+    -core => [
 	 'AppConfig' => '',
 	 'common::sense' => '',
 	 'DBIx::Class' => '',
+	 'local::lib' => '',
 	 'Mojo::Base' => '',
 	 'Moose' => '',
     ]);
@@ -19,6 +20,7 @@ WriteMakefile(
 	common::sense => 0,
 	DBIx::Class => 0,
 	Getopt::Long => 0,
+	local::lib => 0,
 	Mojo::Lite => 0,
 	Moose => 0,
     },
