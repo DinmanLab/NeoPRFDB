@@ -6,6 +6,7 @@ use ExtUtils::AutoInstall (
     -core => [ 
 	 'AppConfig' => '',
 	 'common::sense' => '',
+	 'DBIx::Class' => '',
 	 'Mojo::Base' => '',
 	 'Moose' => '',
     ]);
@@ -16,6 +17,7 @@ WriteMakefile(
     PREREQ_PM => {
 	AppConfig => 0,
 	common::sense => 0,
+	DBIx::Class => 0,
 	Getopt::Long => 0,
 	Mojo::Lite => 0,
 	Moose => 0,
