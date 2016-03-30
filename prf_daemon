@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-use common::sense;
+use Modern::Perl;
 use autodie;
 use diagnostics;
 use Mojolicious::Lite;
@@ -9,25 +9,33 @@ use PRFNeo;
 # Documentation browser under "/perldoc"
 plugin 'PODRenderer';
 
+## Ok, here is my list of unknown questions at this time:
+## 1.  What the heck does .ep stand for?
+## 2.  How can I use my css? (I saw this somewhere in the docs I was reading)
+## 3.  I see that it has nice support for websockets and sessions, but what is my enter point for them in this?
+## 4.  If I use the morbo server, can I still call on AppConfig/Getopt::Long?  -- looks like they have JSONConfig for this?
+## 5.  What happens to this is I start calling fork() in order to spin off RNA folders?
+## 6.  Can I keep around a cached DBI connection, how does this interact with DBIx::Class?
+## 7.  Where do I put my javascript?  in templates/js? in js/?
+## 8.  It seems it is possible to have everything embedded in one file as well as throughout the templates/ t/ etc directories, why?
+
+## I think this will prefer to use the .html.ep file in the 'templates/' directory?
 get '/' => sub {
   my $c = shift;
   $c->render(template => 'index');
 };
 
+# Echo the request body and send custom header with response
+post '/echo' => sub {
+    my $c = shift;
+    $c->res->headers->header('X-Bender' => 'Bite my shiny metal ass!');
+    $c->render(data => $c->req->body);
+};
+
+
+
 app->start;
 __DATA__
-
-@@ index.html.ep
-% layout 'default';
-% title 'Welcome';
-<h1>Welcome to the Mojolicious real-time web framework!</h1>
-To learn more, you can browse through the documentation
-<%= link_to 'here' => '/perldoc' %>.
-
-In theory, mojolicious can update on the fly without restarting, lets test that here.<br>
-ahh to do that you need to start it with 'morbo'...<br>
-Did it work? holy shit it did!<br>
-ok I was skeptical but this is the coolest thing ever.<br>
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>

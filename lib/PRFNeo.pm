@@ -4,6 +4,8 @@ use Moose;
 use common::sense;
 use diagnostics;
 
+our $VERSION = '201603';
+
 has config => (is => 'rw');
 
 =head1 NAME

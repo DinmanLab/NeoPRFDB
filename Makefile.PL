@@ -6,8 +6,8 @@ my $eumm_version = version->parse($ExtUtils::MakeMaker::VERSION);
 my $prereq = {
     'AppConfig' => 0,
     'autodie' => 0,
-    'common::sense' => 0,
     'DBIx::Class' => 0,
+    'Modern::Perl' => 0,
     'Mojolicious' => 0,
     'Moose' => 0,
 };

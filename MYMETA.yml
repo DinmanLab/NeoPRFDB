@@ -1,14 +1,22 @@
 ---
-abstract: unknown
+abstract: 'A new and more fun PRFdb'
 author:
-  - 'Ashton Trey Belew <abelew@gmail.com>'
+  - atxb
 build_requires:
+  AppConfig: '0'
+  DBIx::Class: '0'
   ExtUtils::MakeMaker: '0'
+  Modern::Perl: '0'
+  Mojolicious: '0'
+  Moose: '0'
+  POSIX: '0'
+  Time::Local: '0'
+  autodie: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 0
 generated_by: 'ExtUtils::MakeMaker version 7.0401, CPAN::Meta::Converter version 2.150005'
-license: unknown
+license: open_source
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: '1.4'
@@ -20,9 +28,14 @@ no_index:
 requires:
   AppConfig: '0'
   DBIx::Class: '0'
-  Getopt::Long: '0'
-  Mojo::Lite: '0'
+  Modern::Perl: '0'
+  Mojolicious: '0'
   Moose: '0'
-  common::sense: '0'
-version: '0'
+  autodie: '0'
+  perl: '5.010001'
+resources:
+  bugtracker: https://github.com/abelew/NeoPRFDB/issues
+  license: http://dev.perl.org/licenses/
+  repository: https://github.com/abelew/NeoPRFDB.git
+version: '201603'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
