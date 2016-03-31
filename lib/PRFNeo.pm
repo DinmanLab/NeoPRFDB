@@ -1,7 +1,7 @@
 package PRFNeo;
 ## Time-stamp: <2016-03-24 20:57:05 abelew>
 use Moose;
-use common::sense;
+use Modern::Perl;
 use diagnostics;
 
 our $VERSION = '201603';
