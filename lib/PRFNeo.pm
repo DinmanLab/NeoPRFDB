@@ -1,5 +1,5 @@
 package PRFNeo;
-## Time-stamp: <2016-03-24 20:57:05 abelew>
+## Time-stamp: <Sat Apr  2 11:26:08 2016 Ashton Trey Belew (abelew@gmail.com)>
 use Moose;
 use Modern::Perl;
 use diagnostics;
@@ -41,7 +41,7 @@ Email abelew@gmail.com
 
 =head1 SEE ALSO
 
-    L<common::sense> L<autodie> L<local::lib>
+    L<PRFNeo::Folders>
 
 =cut
 
