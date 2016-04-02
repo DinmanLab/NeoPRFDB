@@ -1,0 +1,37 @@
+#!/usr/bin/env perl
+use Modern::Perl;
+use DBIx::Class::Schema::Loader 'make_schema_at';
+
+my $DEBUG = @ARGV and $ARGV[0] =~ /^\-[\-]*v/;
+
+say $DBIx::Class::Schema::Loader::VERSION if $DEBUG;
+my $default_dsn = 'dbi:SQLite:dbname=test.db';
+my @dsn;
+if ($ENV{DSN}) {
+    @dsn = $ENV{DSN};
+} else {
+    @dsn = $default_dsn;
+}
+
+my $options = {
+    debug => $DEBUG,
+    dump_directory => 'lib',
+    components => [qw/ InflateColumn::DateTime /],
+    generate_pod => 0,
+};
+
+make_schema_at(Schema => $options, \@dsn);
+
+=head1 NAME
+
+    prf_schema
+
+=head1 USAGE
+
+    prf_schema
+
+=head1 SYNOPSIS
+
+    Generates the Schema.pm used by DBIx::Class.
+
+=cut
